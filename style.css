@@ -1,0 +1,242 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+   text-decoration: none;
+}
+
+a:hover  {
+   text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+   font-style: normal;  
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+   font-size: inherit;
+   color: inherit;
+   background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+   display: inline-block;
+   box-shadow: none;
+   background-color: transparent;
+   background: none;
+   cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+   outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* main */
+html {
+   min-height: 100vh; /* sticky footer */
+   scroll-behavior: smooth;
+}
+
+body {
+   min-height: 100vh; /* sticky footer */
+   display: flex; /* sticky footer */
+   flex-direction: column; /* sticky footer */
+
+   /* text styles */
+   /* font-family: ;
+   font-size: ;
+   line-height: ; 
+   color: ;*/
+
+   text-rendering: optimizeSpeed;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+body > * {
+  flex-shrink: 0; /* sticky footer */
+}
+
+body.active{
+   overflow: hidden;
+}
+
+/* if this sections will position:relative */
+/* section,
+header,
+main,
+footer{
+   position: relative;
+   overflow: hidden;
+} */
+
+
+
+
+   
+/* Grid styles */
+
+.container {
+   max-width: 1140px;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   }
+
+/* Utility */
+
+.none {
+   display: none !important;
+}
+
+.visually-hidden {
+   opacity: 0;
+   visibility: hidden;
+   width: 0px;
+   height: 0px;
+   display: block;
+   margin-left: -10000px;
+   background: transparent;
+   font-size: 0;
+}
+
+/* turn off yellow background for input */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+   border-bottom: 1px solid #8f8d8d;
+   -webkit-text-fill-color: #161616;
+   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+   transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Sticky Footer */
+.footer {
+      margin-top: auto; /* sticky footer */
+}
+
+/* media adaptive for examples */
+/* Tablet */
+
+/* @media (max-width: 1199px) {
+   width: 900px;
+} */
+
+/* Mobile */
+
+/* @media (max-width: 899px) {
+   width: 768px;
+} */
+
+/* Mobile XS */
+
+/* @media (max-width: 767px) {
+   width: 320px;
+}  */
+
+
+/* Utility */
+
+.none {
+display: none !important;
+}
+
+.visually-hidden {
+opacity: 0;
+visibility: hidden;
+width: 0px;
+height: 0px;
+display: block;
+margin-left: -10000px;
+background: transparent;
+font-size: 0;
+}
+
+/* off yellow background input */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+border-bottom: 1px solid #8f8d8d;
+-webkit-text-fill-color: #161616;
+-webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Sticky Footer */
+.footer {
+margin-top: auto; /* sticky footer */
+}
