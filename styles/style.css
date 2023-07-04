@@ -285,3 +285,37 @@ body *{
    backdrop-filter: blur(5px);
 }
 
+/* education-experiance============================ */
+.education-experiance {
+   padding:  100px 0;
+}
+
+.education-experiance__content {
+
+}
+
+.education-experiance__row {
+   display: flex;
+   column-gap: 50px;
+   row-gap: 60px;
+   flex-wrap: wrap;
+}
+.education-experiance__list li:not(:last-child){
+   margin-bottom: 15px;
+}
+
+.experiance {
+
+}
+
+.education {
+
+}
+
+.courses {
+
+}
+
+.languages {
+
+}
