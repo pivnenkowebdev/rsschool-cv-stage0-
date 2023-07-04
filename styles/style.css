@@ -48,6 +48,12 @@ body *{
 .main-subtitle {
 
 }
+
+.block-title{
+   font-size: 18px;
+   font-weight: 500;
+   margin-bottom: 20px;
+}
 /* menu-link------------- */
 .menu-link{
    position: relative;
@@ -190,6 +196,7 @@ body *{
 
 .about-me__row:first-child {
    display: flex;
+   -moz-column-gap: 100px;
    column-gap: 100px;
    flex-wrap: wrap;
 }
@@ -232,6 +239,7 @@ body *{
 .my-skills__row {
    display: flex;
    justify-content: space-around;
+   -moz-column-gap: 50px;
    column-gap: 50px;
    align-items: center;
    flex-wrap: wrap;
@@ -239,6 +247,7 @@ body *{
 
 .my-skills__holder-img {
    width: 400px;
+   -webkit-filter: drop-shadow(0px 0px 10px #8282ee);
    filter: drop-shadow(0px 0px 10px #8282ee);
 }
 
@@ -253,6 +262,7 @@ body *{
 
 .portfolio__row {
    display: flex;
+   -moz-column-gap: 50px;
    column-gap: 50px;
    flex-wrap: wrap;
 }
@@ -282,6 +292,7 @@ body *{
    align-items: center;
    transition: transform 0.5s;
    background-color: rgba(255, 255, 255, 0.3);
+   -webkit-backdrop-filter: blur(5px);
    backdrop-filter: blur(5px);
 }
 
@@ -290,12 +301,9 @@ body *{
    padding:  100px 0;
 }
 
-.education-experiance__content {
-
-}
-
 .education-experiance__row {
    display: flex;
+   -moz-column-gap: 50px;
    column-gap: 50px;
    row-gap: 60px;
    flex-wrap: wrap;
@@ -304,18 +312,65 @@ body *{
    margin-bottom: 15px;
 }
 
-.experiance {
+/* example code=================================== */
+
+.example-code {
+
+}
+.example-code__content {
 
 }
 
-.education {
+.wrapper-section-title {
 
 }
 
-.courses {
+.example-code__row{
+   display: flex;
+   flex-wrap: wrap;
+   -moz-column-gap: 50px;
+   column-gap: 50px;
+   row-gap: 50px;
+   justify-content: center;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.section-title {
 
 }
 
-.languages {
+.example-code__item {
 
+}
+
+.wrapper-block-title {
+
+}
+
+.block-title {
+
+}
+
+.example-code__holder-code {
+   max-width: 500px;
+   max-height: 700px;
+
+   overflow-x: auto;
+   border: 2px solid #000000;
+   scrollbar-width: 6px;
+   scrollbar-color: #4d4a4a #ffffff;
+}
+
+.example-code__holder-code::-webkit-scrollbar{
+   width: 6px;
+   height: 6px;
+}
+.example-code__holder-code::-webkit-scrollbar-track{
+   background-color: #4d4a4a;
+}
+.example-code__holder-code::-webkit-scrollbar-thumb{
+   background-color: blue;
+   border-radius: 20px;
+   border: 5px solid #ffffff;
 }
