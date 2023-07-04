@@ -43,7 +43,7 @@ img {
 
 img, svg {
 	width: 100%;
-   object-fit: contain;
+   object-fit: cover;
 }
 
 address {
