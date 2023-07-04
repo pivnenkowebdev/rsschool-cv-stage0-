@@ -4,30 +4,36 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Pivnenko Anton | CV</title>
-      <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./styles/reset.css">
+      <link rel="stylesheet" href="./styles/style.css">
    </head>
    <body>
       <header class="header">
          <div class="container">
             <div class="header__content">
-               <div class="logo"></div>
+               <a class="logo">
+                  <img src="./img/icons/logo.svg" alt="logo">
+               </a>
                <nav class="header__menu">
                   <ul class="header__menu-list">
                      <li>
-                        <a href="#about-me">about me</a>
+                        <a class="menu-link" href="#about-me">about-me</a>
                      </li>
                      <li>
-                        <a href="#my-skills">my skills</a>
+                        <a class="menu-link" href="#my-skills">my-skills</a>
                      </li>
                      <li>
-                        <a href="#portfolio">portfolio</a>
+                        <a class="menu-link" href="#portfolio">portfolio</a>
                      </li>
                      <li>
-                        <a href="#education-experiance">education&experiance</a>
+                        <a class="menu-link" href="#education-experiance">education&experiance</a>
                      </li>
                      <li>
-                        <a href="#example-code">example code</a>
+                        <a class="menu-link" href="#example-code">example-code</a>
                      </li>
                   </ul>
                </nav>
@@ -49,23 +55,23 @@
                         <div class="about-me__contacts">
                            <ul class="contacts-list">
                               <li>
-                                 <a href="mailto:pivnenkowebdev@gmail.com">Email</a>
+                                 <a class="contsct-link" href="mailto:pivnenkowebdev@gmail.com">Email</a>
                               </li>
                               <li>
-                                 <a href="mailto:https://t.me/nektown">Telegram</a>
+                                 <a class="contsct-link" href="mailto:https://t.me/nektown">Telegram</a>
                               </li>
                               <li>
-                                 <a href="mailto:https://@pivnenkowebdev">Discord</a>
+                                 <a class="contsct-link" href="mailto:https://@pivnenkowebdev">Discord</a>
                               </li>
                               <li>
-                                 <a href="mailto:https://github.com/pivnenkowebdev">GitHub</a>
+                                 <a class="contsct-link" href="mailto:https://github.com/pivnenkowebdev">GitHub</a>
                               </li>
                            </ul>
                         </div>
                         <a href="https://pivnenko-anton.pro/" class="context-link">Portfolio</a>
                      </div>
                      <div class="about-me__holder-avatar">
-                        <img src="./img/ava.jpg" alt="avatar">
+                        <img src="./img/others/ava.jpg" alt="avatar">
                      </div>
                   </div>
                   <div class="about-me__row">
@@ -180,7 +186,7 @@
                         <p class="block-title">html5</p>
                      </div>
                      <div class="example-code__holder-code">
-                        <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 0.5em;"><span class="hljs-meta" style="color: rgb(20, 155, 147);">&lt;!DOCTYPE html&gt;</span>
+                        <pre class="hljs" style="display: block; background: rgb(32, 28, 32); color: rgb(185, 181, 184); padding: 0.5em;"><span class="hljs-meta" style="color: rgb(20, 155, 147);">&lt;!DOCTYPE html&gt;</span>
                            <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"en"</span>&gt;</span>
                            <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">head</span>&gt;</span>
                               <span class="hljs-tag" style="color: rgb(221, 70, 76);">&lt;<span class="hljs-name" style="color: rgb(221, 70, 76);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(143, 193, 62);">"./css/style.css"</span>&gt;</span>
@@ -226,7 +232,7 @@
                         <p class="block-title">css</p>
                      </div>
                      <div class="example-code__holder-code">
-                        <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 0.5em;">@<span class="hljs-keyword" style="color: rgb(200, 94, 124);">import</span> <span class="hljs-string" style="color: rgb(143, 193, 62);">'./reset.css'</span>;
+                        <pre class="hljs" style="display: block; background: rgb(32, 28, 32); color: rgb(185, 181, 184); padding: 0.5em;">@<span class="hljs-keyword" style="color: rgb(200, 94, 124);">import</span> <span class="hljs-string" style="color: rgb(143, 193, 62);">'./reset.css'</span>;
                            @<span class="hljs-keyword" style="color: rgb(200, 94, 124);">import</span> url(<span class="hljs-string" style="color: rgb(143, 193, 62);">'https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&amp;display=swap'</span>);
                            
                            <span class="hljs-selector-tag" style="color: rgb(200, 94, 124);">html</span>,<span class="hljs-selector-tag" style="color: rgb(200, 94, 124);">body</span>{
@@ -363,7 +369,7 @@
                         <p class="block-title"></p>
                      </div>
                      <div class="example-code__holder-code">
-                        <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 0.5em;"><span class="hljs-comment" style="color: rgb(152, 148, 152);">/* Reset and base styles  */</span>
+                        <pre class="hljs" style="display: block; background: rgb(32, 28, 32); color: rgb(185, 181, 184); padding: 0.5em;"><span class="hljs-comment" style="color: rgb(152, 148, 152);">/* Reset and base styles  */</span>
                            * {
                               <span class="hljs-attribute" style="color: rgb(221, 70, 76);">padding</span>: <span class="hljs-number" style="color: rgb(253, 139, 25);">0px</span>;
                               <span class="hljs-attribute" style="color: rgb(221, 70, 76);">margin</span>: <span class="hljs-number" style="color: rgb(253, 139, 25);">0px</span>;
@@ -487,7 +493,7 @@
                         <p class="block-title">js</p>
                      </div>
                      <div class="example-code__holder-code">
-                        <pre class="hljs" style="display: block; background: rgb(50, 41, 49); color: rgb(185, 181, 184); padding: 0.5em;"><span class="hljs-keyword" style="color: rgb(200, 94, 124);">const</span> toDo = document.querySelector(<span class="hljs-string" style="color: rgb(143, 193, 62);">'#to-do'</span>);
+                        <pre class="hljs" style="display: block; background: rgb(32, 28, 32); color: rgb(185, 181, 184); padding: 0.5em;"><span class="hljs-keyword" style="color: rgb(200, 94, 124);">const</span> toDo = document.querySelector(<span class="hljs-string" style="color: rgb(143, 193, 62);">'#to-do'</span>);
                            <span class="hljs-keyword" style="color: rgb(200, 94, 124);">const</span> listNotes = toDo.querySelector(<span class="hljs-string" style="color: rgb(143, 193, 62);">'#list-notes'</span>);
                            <span class="hljs-keyword" style="color: rgb(200, 94, 124);">const</span> inputSearch = toDo.querySelector(<span class="hljs-string" style="color: rgb(143, 193, 62);">'#search'</span>);
                            

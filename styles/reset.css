@@ -15,6 +15,7 @@
 
 a, a:link, a:visited  {
    text-decoration: none;
+   display: inline-block;
 }
 
 a:hover  {
@@ -43,6 +44,7 @@ img {
 img, svg {
 	max-width: 100%;
 	height: auto;
+   object-fit: cover;
 }
 
 address {
@@ -88,7 +90,22 @@ legend {
 	display: block;
 }
 
-/* main */
+/* turn off yellow background for input */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+   border-bottom: 1px solid #8f8d8d;
+   -webkit-text-fill-color: #161616;
+   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+   transition: background-color 5000s ease-in-out 0s;
+}
+
 html {
    min-height: 100vh; /* sticky footer */
    scroll-behavior: smooth;
@@ -98,13 +115,6 @@ body {
    min-height: 100vh; /* sticky footer */
    display: flex; /* sticky footer */
    flex-direction: column; /* sticky footer */
-
-   /* text styles */
-   /* font-family: ;
-   font-size: ;
-   line-height: ; 
-   color: ;*/
-
    text-rendering: optimizeSpeed;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
@@ -130,14 +140,9 @@ footer{
    overflow: hidden;
 } */
 
-
-
-
-   
-/* Grid styles */
-
 .container {
    max-width: 1140px;
+   min-width: 320px;
    width: 100%;
    margin-left: auto;
    margin-right: auto;
@@ -145,45 +150,7 @@ footer{
    padding-right: 15px;
    }
 
-/* Utility */
-
-.none {
-   display: none !important;
-}
-
-.visually-hidden {
-   opacity: 0;
-   visibility: hidden;
-   width: 0px;
-   height: 0px;
-   display: block;
-   margin-left: -10000px;
-   background: transparent;
-   font-size: 0;
-}
-
-/* turn off yellow background for input */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-   border-bottom: 1px solid #8f8d8d;
-   -webkit-text-fill-color: #161616;
-   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
-   transition: background-color 5000s ease-in-out 0s;
-}
-
-/* Sticky Footer */
-.footer {
-      margin-top: auto; /* sticky footer */
-}
-
-/* media adaptive for examples */
+   /* media adaptive for examples */
 /* Tablet */
 
 /* @media (max-width: 1199px) {
@@ -202,6 +169,27 @@ select:-webkit-autofill:focus {
    width: 320px;
 }  */
 
+/* Utility */
+
+.none {
+   display: none !important;
+}
+
+.visually-hidden {
+   opacity: 0;
+   visibility: hidden;
+   width: 0px;
+   height: 0px;
+   display: block;
+   margin-left: -10000px;
+   background: transparent;
+   font-size: 0;
+}
+
+/* Sticky Footer */
+.footer {
+      margin-top: auto; /* sticky footer */
+}
 
 /* Utility */
 
@@ -218,22 +206,6 @@ display: block;
 margin-left: -10000px;
 background: transparent;
 font-size: 0;
-}
-
-/* off yellow background input */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-border-bottom: 1px solid #8f8d8d;
--webkit-text-fill-color: #161616;
--webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
-transition: background-color 5000s ease-in-out 0s;
 }
 
 /* Sticky Footer */
