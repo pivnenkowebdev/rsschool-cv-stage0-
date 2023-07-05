@@ -438,11 +438,11 @@ body *{
       position: fixed;
       top: -100%;
       left: 0;
-      height: 100vh;
-      width: 100vw;
+      height: 100%;
+      width: 100%;
       background-color: rgba(255, 255, 255, 0.6);
       -webkit-backdrop-filter: blur(5px);
-              backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
       transition: transform 0.5s ease-in-out;
    }
 
