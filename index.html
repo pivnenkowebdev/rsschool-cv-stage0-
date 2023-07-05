@@ -13,35 +13,66 @@
    </head>
    <body>
       <header class="header">
-         <div class="container">
-            <div class="header__content">
-               <a class="logo">
-                  <img src="./img/icons/logo.svg" alt="logo">
-               </a>
-               <nav class="header__menu">
-                  <ul class="header__menu-list">
-                     <li>
-                        <a class="menu-link" href="#about-me">about-me</a>
-                     </li>
-                     <li>
-                        <a class="menu-link" href="#my-skills">my-skills</a>
-                     </li>
-                     <li>
-                        <a class="menu-link" href="#portfolio">portfolio</a>
-                     </li>
-                     <li>
-                        <a class="menu-link" href="#education-experiance">education&experiance</a>
-                     </li>
-                     <li>
-                        <a class="menu-link" href="#example-code">example-code</a>
-                     </li>
-                  </ul>
-               </nav>
+         <div class="header__desctop">
+            <div class="container">
+               <div class="header__content">
+                  <a class="logo">
+                     <img src="./img/icons/logo.svg" alt="logo">
+                  </a>
+                  <nav class="header__menu">
+                     <ul class="header__menu-list">
+                        <li>
+                           <a class="menu-link" href="#about-me">about-me</a>
+                        </li>
+                        <li>
+                           <a class="menu-link" href="#my-skills">my-skills</a>
+                        </li>
+                        <li>
+                           <a class="menu-link" href="#portfolio">portfolio</a>
+                        </li>
+                        <li>
+                           <a class="menu-link" href="#education-experiance">education&experiance</a>
+                        </li>
+                        <li>
+                           <a class="menu-link" href="#example-code">example-code</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
             </div>
+         </div>
+         <div class="header__mobile">
+            <a class="logo">
+               <img src="./img/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="header__menu header__menu--mobile">
+               <ul class="header__menu-list">
+                  <li>
+                     <a class="menu-link" href="#about-me">about-me</a>
+                  </li>
+                  <li>
+                     <a class="menu-link" href="#my-skills">my-skills</a>
+                  </li>
+                  <li>
+                     <a class="menu-link" href="#portfolio">portfolio</a>
+                  </li>
+                  <li>
+                     <a class="menu-link" href="#education-experiance">education&experiance</a>
+                  </li>
+                  <li>
+                     <a class="menu-link" href="#example-code">example-code</a>
+                  </li>
+               </ul>
+            </nav>
+            <button class="burger">
+               <div class="burger-line burger-line--first"></div>
+               <div class="burger-line burger-line--second"></div>
+               <div class="burger-line burger-line--third"></div>
+            </button>
          </div>
       </header>
       <main class="main">
-         <section class="about-me" id="aboutlink">
+         <section class="about-me" id="about-me">
             <div class="container">
                <div class="about-me__content">
                   <div class="about-me__row">
@@ -141,7 +172,7 @@
                      </div>
                      <ul class="my-skills__list-skills">
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/html.svg" alt="icon">
                               </span>
@@ -149,7 +180,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/css.svg" alt="icon">
                               </span>
@@ -157,7 +188,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://sass-lang.com/guide/" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/scss.svg" alt="icon">
                               </span>
@@ -165,7 +196,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://learn.javascript.ru/" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/js.svg" alt="icon">
                               </span>
@@ -173,7 +204,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://www.php.net/" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/php.svg" alt="icon">
                               </span>
@@ -181,7 +212,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://greensock.com/" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/gsap-greensock.svg" alt="icon">
                               </span>
@@ -189,7 +220,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://jquery.com/" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/jquery.svg" alt="icon">
                               </span>
@@ -197,7 +228,7 @@
                            </a>
                         </li>
                         <li>
-                           <a class="skill-link" href="">
+                           <a class="skill-link" href="https://git-scm.com/" target="_blank">
                               <span class="skill-link__icon">
                                  <img src="./img/skills/git.svg" alt="icon">
                               </span>
@@ -209,7 +240,7 @@
                </div>
             </div>
          </section>
-         <section class="portfolio">
+         <section class="portfolio" id="portfolio">
             <div class="container">
                <div class="portfolio__content">
                   <div class="wrapper-section-title">
@@ -246,7 +277,7 @@
                </div>
             </div>
          </section>
-         <section class="education-experiance">
+         <section class="education-experiance" id="education-experiance">
             <div class="container">
                <div class="education-experiance__content">
                   <div class="education-experiance__row">
@@ -313,7 +344,7 @@
                </div>
             </div>
          </section>
-         <section class="example-code">
+         <section class="example-code" id="example-code">
             <div class="container">
                <div class="example-code__content">
                   <div class="wrapper-section-title">
@@ -699,7 +730,7 @@
             <div class="container">
                <div class="footer__content">
                   <div class="footer__links">
-                     <a class="footer__friendly-link" href="https://rs.school/" target="_blank">
+                     <a class="footer__friendly-link" href="https://rs.school/js/" target="_blank">
                         <img src="./img/icons/rs-school.svg" alt="logo-rsschool">
                      </a>
                      <ul class="contacts-list">
@@ -762,22 +793,18 @@
                      </ul>
                   </div>
                   <div class="footer__copyright">Copyright© CV Pivnenko Anton 2023</div>
+                  <div class="holder-validate">
+                     <p>
+                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                            <img style="border:0; width:88px; height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Правильный CSS!">
+                        </a>
+                    </p>
+                  </div>
                </div>
             </div>
       </footer>
+      <script src="./js/main.js"></script>
    </body>
 </html>
 
-<!-- 
-студент засабмитил в rs app ссылку на своё CV, задеплоенное на gh-pages +10
-вёрстка валидная +10
-для проверки валидности вёрстки используйте сервис https://validator.w3.org/
-валидной вёрстке соответствует надпись "Document checking completed. No errors or warnings to show." В таком случае баллы за пункт требований выставляем полностью.
-если есть предупреждения - warnings, но нет ошибок - errors, выставляем половину баллов за пункт требований
 
-вёрстка семантическая +20
-
-при уменьшении масштаба страницы браузера вёрстка размещается по центру по горизонтали, а не сдвигается в сторону +10
-
-
- -->

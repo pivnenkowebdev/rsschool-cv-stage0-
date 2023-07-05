@@ -11,9 +11,31 @@ body *{
 
 /* blocks==================================================== */
 
+.burger{
+   width: 32px;
+   height: 32px;
+   z-index: 2;
+}
+
+.burger:hover .burger-line{
+   background-color: #c42727;
+}
+
+.burger-line{
+   height: 3px;
+   width: 100%;
+   background-color: #201c20;
+   transition: background-color 0.5s;
+}
+
+.burger-line:not(:last-child){
+   margin-bottom: 6px;
+}
+
 .logo {
    width: 50px;
    height: 50px;
+   z-index: 2;
 }
 
 /* titles------------------- */
@@ -153,6 +175,10 @@ body *{
    width: 100%;
    padding: 20px 0;
    background-color: #ffffff
+}
+
+.header__mobile{
+   display: none;
 }
 
 .header__content {
@@ -309,7 +335,7 @@ body *{
 
    overflow-x: auto;
    border: 2px solid #000000;
-   scrollbar-width: 6px;
+   scrollbar-width: thin;
    scrollbar-color: #4d4a4a #ffffff;
 }
 
@@ -333,10 +359,6 @@ body *{
    padding: 20px 0;
 }
 
-.footer__content {
-
-}
-
 .footer__links {
    display: flex;
    align-items: center;
@@ -356,13 +378,14 @@ body *{
 
 .footer .contacts-list {
    display: flex;
+   -moz-column-gap: 40px;
    column-gap: 40px;
    flex-wrap: wrap;
    margin-bottom: 0;
 }
 
 .footer__copyright {
-
+   margin-bottom: 15px;
 }
 
 .end__line{
@@ -373,4 +396,170 @@ body *{
 	border-bottom: 1px solid #c42727;
 	box-shadow: 0 20px 20px -20px #c42727;
 	width: 95%;
+}
+
+/* media============================= */
+
+@media (max-width:1044px) {
+
+   /* header */
+
+   .header{
+      padding: 5px 0;
+   }
+
+   .header__desctop{
+      display: none;
+   }
+
+   .header__mobile{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+   }
+
+   .header__menu--mobile{
+      position: fixed;
+      top: -100%;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(5px);
+   }
+
+   .header__menu--mobile .header__menu-list{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+   }
+
+   /* about-me */
+
+   .about-me__row:first-child{
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 50px;
+   }
+
+   .about-me{
+      padding: 150px 0 50px;
+   }
+
+   .wrapper-main-title,
+   .wrapper-main-subtitle{
+      text-align: center;
+   }
+
+   .main-title{
+      font-size: 40px;
+   }
+
+   .main-subtitle{
+      font-size: 30px;
+   }
+
+   .about-me .contacts-list{
+      display: flex;
+      column-gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .wrapper-section-title{
+      text-align: center;
+   }
+
+   .about-me__description{
+      max-width: 100%;
+      text-align: center;
+   }
+
+   /* portfolio */
+
+   .portfolio__row{
+      row-gap: 50px;
+      justify-content: center;
+   }
+
+   /*my-skills*/
+
+   .my-skills,
+   .portfolio,
+   .education-experiance,
+   .example-code{
+      padding: 50px 0;
+   }
+
+   /* education&experiance */
+
+   .education-experiance__row{
+      justify-content: center;
+   }
+
+   .education-experiance__item{
+      max-width: 320px;
+   }
+
+   .education-experiance__item{
+      text-align: center;
+   }
+
+   /* footer */
+
+   .footer__links{
+      flex-direction: column;
+      row-gap: 30px;
+   }
+
+   .footer__links .contacts-list{
+      justify-content: center;
+   }
+
+   @media(max-width:700px) {
+
+      /*about-me*/
+
+      .about-me__holder-avatar,
+      .my-skills__holder-img{
+         max-width: 290px;
+      }
+
+      /* portfolio */
+
+      .card-project__holder-img{
+         max-width: 290px;
+      }
+
+      /*my-skills*/
+
+      .my-skills__row{
+         flex-direction: column-reverse;
+      }
+   
+      .my-skills__list-skills{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         column-gap: 40px;
+         margin-bottom: 40px;
+      }
+
+      /* example-code */
+
+      .example-code__holder-code{
+         max-width: 290px;
+         max-height: 70vh;
+      }
+
+      /* footer */
+      .footer__friendly-link{
+         max-width: 290px;
+      }
+   }
 }
