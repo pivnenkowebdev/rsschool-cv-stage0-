@@ -16,7 +16,7 @@
          <div class="header__desctop">
             <div class="container">
                <div class="header__content">
-                  <a class="logo">
+                  <a class="logo" href="#!">
                      <img src="./img/icons/logo.svg" alt="logo">
                   </a>
                   <nav class="header__menu">
@@ -42,7 +42,7 @@
             </div>
          </div>
          <div class="header__mobile">
-            <a class="logo">
+            <a class="logo" href="#!">
                <img src="./img/icons/logo.svg" alt="logo">
             </a>
             <nav class="header__menu header__menu--mobile">
@@ -65,9 +65,9 @@
                </ul>
             </nav>
             <button class="burger">
-               <div class="burger-line burger-line--first"></div>
-               <div class="burger-line burger-line--second"></div>
-               <div class="burger-line burger-line--third"></div>
+               <span class="burger-line burger-line--first"></span>
+               <span class="burger-line burger-line--second"></span>
+               <span class="burger-line burger-line--third"></span>
             </button>
          </div>
       </header>
@@ -148,7 +148,7 @@
                         <img src="./img/others/ava.jpg" alt="avatar">
                      </div>
                   </div>
-                  <div class="about-me__row">
+                  <div class="about-me__row" id="about-me-description">
                      <div class="wrapper-section-title">
                         <h6 class="section-title">about-me</h6>
                      </div>
@@ -803,6 +803,8 @@
                </div>
             </div>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
       <script src="./js/main.js"></script>
    </body>
 </html>

@@ -12,24 +12,38 @@ body *{
 /* blocks==================================================== */
 
 .burger{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    width: 32px;
-   height: 32px;
+   height: 24px;
    z-index: 2;
 }
 
-.burger:hover .burger-line{
+.burger:hover .burger-line,
+.burger.active .burger-line{
    background-color: #c42727;
 }
 
 .burger-line{
+   display: inline-block;
    height: 3px;
    width: 100%;
    background-color: #201c20;
    transition: background-color 0.5s;
+   transition: transform 0.5s ease-in-out;
 }
 
-.burger-line:not(:last-child){
-   margin-bottom: 6px;
+.burger.active .burger-line--first{
+   transform: translateY(11px) rotate(45deg);
+}
+
+.burger.active .burger-line--second{
+   transform: scale(0);
+}
+
+.burger.active .burger-line--third{
+   transform: translateY(-11px) rotate(-45deg);
 }
 
 .logo {
@@ -426,7 +440,13 @@ body *{
       height: 100vh;
       width: 100vw;
       background-color: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+              backdrop-filter: blur(5px);
+      transition: transform 0.5s ease-in-out;
+   }
+
+   .header__menu--mobile.active{
+      transform: translateY(100%);
    }
 
    .header__menu--mobile .header__menu-list{
@@ -466,7 +486,8 @@ body *{
 
    .about-me .contacts-list{
       display: flex;
-      column-gap: 20px;
+      -moz-column-gap: 20px;
+           column-gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
    }
@@ -546,7 +567,8 @@ body *{
          display: flex;
          flex-wrap: wrap;
          justify-content: center;
-         column-gap: 40px;
+         -moz-column-gap: 40px;
+              column-gap: 40px;
          margin-bottom: 40px;
       }
 
