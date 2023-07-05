@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+   document.body.style.visibility = 'visible';
    gsap.registerPlugin(ScrollTrigger);
 
       // smooth scroll to anchor-link
