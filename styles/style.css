@@ -543,6 +543,11 @@ body *{
       justify-content: center;
    }
 
+   .footer__copyright,
+   .holder-validate{
+      text-align: center;
+   }
+
    @media(max-width:700px) {
 
       /*about-me*/
