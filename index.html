@@ -357,46 +357,47 @@
                         </div>
                         <div class="example-code__holder-code">
                            <pre>
-                              <code>&lt;!DOCTYPE html&gt;
-                              &lt;html lang=&quot;en&quot;&gt;
-                              &lt;head&gt;
-                                 &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/style.css&quot;&gt;
-                                 &lt;meta charset=&quot;UTF-8&quot;&gt;
-                                 &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-                                 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-                                 &lt;title&gt;to-do-list&lt;/title&gt;
-                              &lt;/head&gt;
-                              &lt;body&gt;
-                                 &lt;div class=&quot;wrapper&quot;&gt;
-                                    &lt;form action=&quot;&quot; class=&quot;to-do&quot; id=&quot;to-do&quot;&gt;
-                                       &lt;div class=&quot;header&quot;&gt;
-                                          &lt;div class=&quot;container&quot;&gt;
-                                             &lt;div class=&quot;to-do__item&quot;&gt;
-                                                &lt;p class=&quot;to-do__heading&quot;&gt;To-do&lt;/p&gt;
-                                                &lt;input type=&quot;search&quot; class=&quot;to-do__search&quot; placeholder=&quot;Search&quot; id=&quot;search&quot;&gt;
-                                             &lt;/div&gt;
-                                         &lt;/div&gt;
-                                       &lt;/div&gt;
-                                       &lt;div class=&quot;main&quot;&gt;
-                                            &lt;div class=&quot;container&quot;&gt;
-                                                &lt;div class=&quot;to-do__item&quot;&gt;
-                                                   &lt;div class=&quot;add-note&quot;&gt;
-                                                      &lt;input type=&quot;text&quot; class=&quot;add-note__input&quot; placeholder=&quot;Add note&quot; id=&quot;new-note-input&quot;&gt;
-                                                      &lt;input type=&quot;submit&quot; class=&quot;add-btn&quot; value=&quot;Add&quot; id=&quot;add-btn&quot;&gt;
-                                                   &lt;/div&gt;
-                                                &lt;/div&gt;
-                                                &lt;div class=&quot;to-do__item&quot;&gt;
-                                                      &lt;ul class=&quot;list-notes&quot; id=&quot;list-notes&quot;&gt;
-                                                        
-                                                      &lt;/ul&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                       &lt;/div&gt;
-                                    &lt;/form&gt;
-                                 &lt;/div&gt;
-                                 &lt;script src=&quot;./js/main.js&quot;&gt;&lt;/script&gt;
-                              &lt;/body&gt;
-                              &lt;/html&gt;</code>
+                              <code>
+   &lt;!DOCTYPE html&gt;
+   &lt;html lang=&quot;en&quot;&gt;
+      &lt;head&gt;
+         &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/style.css&quot;&gt;
+         &lt;meta charset=&quot;UTF-8&quot;&gt;
+         &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+         &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+         &lt;title&gt;to-do-list&lt;/title&gt;
+      &lt;/head&gt;
+   &lt;body&gt;
+      &lt;div class=&quot;wrapper&quot;&gt;
+         &lt;form action=&quot;&quot; class=&quot;to-do&quot; id=&quot;to-do&quot;&gt;
+            &lt;div class=&quot;header&quot;&gt;
+               &lt;div class=&quot;container&quot;&gt;
+                  &lt;div class=&quot;to-do__item&quot;&gt;
+                     &lt;p class=&quot;to-do__heading&quot;&gt;To-do&lt;/p&gt;
+                     &lt;input type=&quot;search&quot; class=&quot;to-do__search&quot; placeholder=&quot;Search&quot; id=&quot;search&quot;&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+      &lt;div class=&quot;main&quot;&gt;
+         &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;to-do__item&quot;&gt;
+               &lt;div class=&quot;add-note&quot;&gt;
+                  &lt;input type=&quot;text&quot; class=&quot;add-note__input&quot; placeholder=&quot;Add note&quot; id=&quot;new-note-input&quot;&gt;
+                  &lt;input type=&quot;submit&quot; class=&quot;add-btn&quot; value=&quot;Add&quot; id=&quot;add-btn&quot;&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;to-do__item&quot;&gt;
+               &lt;ul class=&quot;list-notes&quot; id=&quot;list-notes&quot;&gt;
+               &lt;/ul&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+         &lt;/form&gt;
+      &lt;/div&gt;
+   &lt;script src=&quot;./js/main.js&quot;&gt;&lt;/script&gt;
+   &lt;/body&gt;
+   &lt;/html&gt;
+                           </code>
                            </pre>
                         </div>
                      </div>
@@ -406,48 +407,47 @@
                         </div>
                         <div class="example-code__holder-code">
                            <pre><code>
-                              const toDo = document.querySelector('#to-do');
-                              const listNotes = toDo.querySelector('#list-notes');
-                              const inputSearch = toDo.querySelector('#search');
-                              
-                              toDo.addEventListener('submit', renderNote);
-                              listNotes.addEventListener('click', removeNote);
-                              inputSearch.addEventListener('keyup', filterNotes);
-                              
-                              function renderNote(e) {
-                                e.preventDefault();
-                              
-                                let inputValue = toDo.querySelector('#new-note-input');
-                              
-                                const newNote = '&lt;li class="list-notes__item"&gt;\n' +
-                                  '  &lt;p class="list-notes__value"&gt;' + inputValue.value + '&lt;/p&gt;\n' +
-                                  '  &lt;button class="delete-btn" data-action=\'delete\'&gt;Delete&lt;/button&gt;\n' +
-                                  '&lt;/li&gt;';
-                              
-                                inputValue.value = '';
-                              
-                                listNotes.insertAdjacentHTML('beforeend', newNote);
-                              }
-                              
-                              function removeNote(e) {
-                                if (e.target.dataset.action == 'delete') {
-                                  e.target.parentNode.remove();
-                                }
-                              }
-                              
-                              function filterNotes(e) {
-                                let searchValue = e.target.value.toLowerCase();
-                                const noteItem = listNotes.querySelectorAll('.list-notes__value');
-                              
-                                noteItem.forEach(function(item) {
-                                  const itemValue = item.textContent.toLowerCase();
-                                  if (itemValue.indexOf(searchValue) != -1) {
-                                    item.closest('.list-notes__item').style.display = 'flex';
-                                  } else {
-                                    item.closest('.list-notes__item').style.display = 'none';
-                                  }
-                                });
-                              }
+   const toDo = document.querySelector('#to-do');
+   const listNotes = toDo.querySelector('#list-notes');
+   const inputSearch = toDo.querySelector('#search');
+                                 
+   toDo.addEventListener('submit', renderNote);
+   listNotes.addEventListener('click', removeNote);
+   inputSearch.addEventListener('keyup', filterNotes);
+                                 
+   function renderNote(e) {
+      e.preventDefault();
+                                 
+      let inputValue = toDo.querySelector('#new-note-input');
+                                 
+      const newNote = '&lt;li class="list-notes__item"&gt;\n' +
+               '  &lt;p class="list-notes__value"&gt;' + inputValue.value + '&lt;/p&gt;\n' +
+               '  &lt;button class="delete-btn" data-action=\'delete\'&gt;Delete&lt;/button&gt;\n' +
+               '&lt;/li&gt;';
+                                 
+      inputValue.value = '';
+                                 
+      listNotes.insertAdjacentHTML('beforeend', newNote);
+   }
+   function removeNote(e) {
+      if (e.target.dataset.action == 'delete') {
+         e.target.parentNode.remove();
+      }
+   }
+                                 
+   function filterNotes(e) {
+      let searchValue = e.target.value.toLowerCase();
+      const noteItem = listNotes.querySelectorAll('.list-notes__value');
+                                 
+      noteItem.forEach(function(item) {
+         const itemValue = item.textContent.toLowerCase();
+         if (itemValue.indexOf(searchValue) != -1) {
+         item.closest('.list-notes__item').style.display = 'flex';
+         } else {
+         item.closest('.list-notes__item').style.display = 'none';
+         }
+      });
+   }
                                 </code></pre>
                         </div>
                      </div>
@@ -458,136 +458,136 @@
                         <div class="example-code__holder-code">
                            <pre>
                               <code>
-                                 @import './reset.css';
-                                 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap');
-                                 
-                                 html,body{
-                                 background-color: rgb(210, 238, 238);
-                                 font-family: 'Kanit', sans-serif;
-                                 }
-                                 
-                                 .container{
-                                 width: 900px;
-                                 margin: 0 auto;
-                                 }
-                                 
-                                 .header {
-                                 padding-top: 40px;
-                                 padding-bottom: 40px;
-                                 background-color: brown;
-                                 margin-bottom: 20px; 
-                                 }
-                                 
-                                 .to-do__item {
-                                 margin-bottom: 20px;
-                                 }
-                                 
-                                 .to-do__item:last-child{
-                                    margin-bottom: 0;
-                                 }
-                                 
-                                 .to-do__heading {
-                                    font-size: 60px;
-                                    font-weight: 600;
-                                    color: rgb(247, 242, 242);
-                                 }
-                                 
-                                 .to-do__search {
-                                    padding-left: 10px;
-                                    padding-right: 10px;
-                                    height: 40px;
-                                    width: 600px;
-                                    font-size: 20px;
-                                    border-radius: 5px;
-                                 }
-                                 
-                                 .add-note__input {
-                                    padding-left: 10px;
-                                    padding-right: 10px;
-                                    height: 40px;
-                                    width: 400px;
-                                    border-radius: 5px 0px 0px 5px;
-                                    font-size: 20px;
-                                 }
-                                 
-                                 .add-note .add-btn {
-                                    padding-left: 20px;
-                                    padding-right: 20px;
-                                    border-radius: 0px 5px 5px 0px;
-                                    height: 40px;
-                                    font-size: 20px;
-                                    background-color: brown;  
-                                    color: rgb(247, 242, 242);
-                                    transition: background-color 500ms, color 500ms;
-                                 }
-                                 
-                                 .list-notes {
-                                    height: 600px;
-                                    border: 1px solid gray;
-                                    border-top: none;
-                                    overflow: auto;
-                                    padding-left: 20px;
-                                    padding-right: 20px;
-                                    padding-bottom: 20px;
-                                 }
-                                 
-                                 .list-notes__item {
-                                    display: flex;
-                                    column-gap: 5px;
-                                    margin-bottom: 15px;
-                                 }
-                                 
-                                 .list-notes__item:last-child{
-                                    margin-bottom: 0;
-                                 }
-                                 
-                                 .list-notes__value {
-                                    width: 90%;
-                                    height: 50px;
-                                    background-color: white;
-                                    overflow:auto;
-                                    padding-left: 15px;
-                                    padding-right: 15px;
-                                    border-radius:5px 0px 0px 5px;
-                                 }
-                                 
-                                 .list-notes__value::-webkit-scrollbar,
-                                 .list-notes::-webkit-scrollbar {
-                                    width: 6px; 
-                                  }
-                                 
-                                  .list-notes__value::-webkit-scrollbar-thumb,
-                                  .list-notes::-webkit-scrollbar-thumb  {
-                                    background-color: rgba(230, 127, 113, 0.5);  
-                                 }
+   @import './reset.css';
+   @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap');
                                     
-                                 .list-notes__value::-webkit-scrollbar-thumb:hover,
-                                 .list-notes::-webkit-scrollbar-thumb:hover{
-                                    background-color: rgba(199, 50, 30, 0.822);    
-                                 }
-                                 
-                                 .list-notes .delete-btn {
-                                    padding-left: 20px;
-                                    padding-right: 20px;
-                                    border-radius: 0px 5px 5px 0px;
-                                    height: 50px;
-                                    font-size: 20px;
-                                    background-color: brown;  
-                                    color: rgb(247, 242, 242);
-                                    transition: background-color 500ms, color 500ms;
-                                 }
-                                 
-                                 .list-notes .delete-btn:hover,
-                                 .add-note .add-btn:hover{
-                                    background-color: rgb(233, 33, 33);
-                                    color: white;
-                                    transition: background-color 500ms, color 500ms;
-                                 }
-                                 
-                                 .list-notes .delete-btn:active,
-                                 .add-note .add-btn:active{
-                                    background-color: rgb(99, 93, 93);
-                                 }
+   html,body{
+   background-color: rgb(210, 238, 238);
+   font-family: 'Kanit', sans-serif;
+   }
+                                    
+   .container{
+   width: 900px;
+   margin: 0 auto;
+   }
+                                    
+   .header {
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: brown;
+   margin-bottom: 20px; 
+   }
+                                    
+   .to-do__item {
+   margin-bottom: 20px;
+   }
+                                    
+   .to-do__item:last-child{
+      margin-bottom: 0;
+   }
+                                    
+   .to-do__heading {
+      font-size: 60px;
+      font-weight: 600;
+      color: rgb(247, 242, 242);
+   }
+                                    
+   .to-do__search {
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 40px;
+      width: 600px;
+      font-size: 20px;
+      border-radius: 5px;
+   }
+                                    
+   .add-note__input {
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 40px;
+      width: 400px;
+      border-radius: 5px 0px 0px 5px;
+      font-size: 20px;
+   }
+                                    
+   .add-note .add-btn {
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 0px 5px 5px 0px;
+      height: 40px;
+      font-size: 20px;
+      background-color: brown;  
+      color: rgb(247, 242, 242);
+      transition: background-color 500ms, color 500ms;
+   }
+                                    
+   .list-notes {
+      height: 600px;
+      border: 1px solid gray;
+      border-top: none;
+      overflow: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+   }
+                                    
+   .list-notes__item {
+      display: flex;
+      column-gap: 5px;
+      margin-bottom: 15px;
+   }
+                                    
+   .list-notes__item:last-child{
+      margin-bottom: 0;
+   }
+                                    
+   .list-notes__value {
+      width: 90%;
+      height: 50px;
+      background-color: white;
+      overflow:auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius:5px 0px 0px 5px;
+   }
+                                    
+   .list-notes__value::-webkit-scrollbar,
+   .list-notes::-webkit-scrollbar {
+      width: 6px; 
+   }
+                                    
+   .list-notes__value::-webkit-scrollbar-thumb,
+   .list-notes::-webkit-scrollbar-thumb  {
+      background-color: rgba(230, 127, 113, 0.5);  
+   }
+                                       
+   .list-notes__value::-webkit-scrollbar-thumb:hover,
+   .list-notes::-webkit-scrollbar-thumb:hover{
+      background-color: rgba(199, 50, 30, 0.822);    
+   }
+                                    
+   .list-notes .delete-btn {
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 0px 5px 5px 0px;
+      height: 50px;
+      font-size: 20px;
+      background-color: brown;  
+      color: rgb(247, 242, 242);
+      transition: background-color 500ms, color 500ms;
+   }
+                                    
+   .list-notes .delete-btn:hover,
+   .add-note .add-btn:hover{
+      background-color: rgb(233, 33, 33);
+      color: white;
+      transition: background-color 500ms, color 500ms;
+   }
+                                    
+   .list-notes .delete-btn:active,
+   .add-note .add-btn:active{
+      background-color: rgb(99, 93, 93);
+   }
                               </code>
                            </pre>
                         </div>
@@ -599,123 +599,123 @@
                         <div class="example-code__holder-code">
                            <pre>
                               <code>
-                                 /* Reset and base styles  */
-                                 * {
-                                    padding: 0px;
-                                    margin: 0px;
-                                    border: none;
-                                 }
-                                 
-                                 *,
-                                 *::before,
-                                 *::after {
-                                    box-sizing: border-box;
-                                 }
-                                 
-                                 :focus,
-                                 :active {
-                                    outline: none;
-                                 }
-                                 
-                                 /* Links */
-                                 
-                                 a, a:visited  {
-                                    color: inherit;
-                                    text-decoration: none;
-                                    display: inline-block;
-                                 }
-                                 
-                                 a:hover  {
-                                    color: inherit;
-                                    text-decoration: none;
-                                 }
-                                 
-                                 a:focus,
-                                 a:active {
-                                    outline: none;
-                                 }
-                                 
-                                 /* Common */
-                                 
-                                 aside, nav, footer, header, section, main {
-                                    display: block;
-                                 }
-                                 
-                                 h1, h2, h3, h4, h5, h6, p {
-                                    font-size: inherit;
-                                    font-weight: inherit;
-                                 }
-                                 
-                                 ul {
-                                    list-style: none;
-                                 }
-                                 
-                                 img, svg {
-                                    display: block;
-                                    max-width: 100%;
-                                    height: auto;
-                                    object-fit: cover;
-                                 }
-                                 
-                                 /* Form */
-                                 
-                                 input, textarea, button, select {
-                                    font-family: inherit;
-                                    font-size: inherit;
-                                 }
-                                 
-                                 input::-ms-clear {
-                                    display: none;
-                                 }
-                                 
-                                 button, input[type="submit"] {
-                                    display: inline-block;
-                                    box-shadow: none;
-                                    background-color: transparent;
-                                    background: none;
-                                    cursor: pointer;
-                                 }
-                                 
-                                 input:focus, input:active,
-                                 button:focus, button:active {
-                                    outline: none;
-                                 }
-                                 
-                                 button::-moz-focus-inner {
-                                    padding: 0;
-                                    border: 0;
-                                 }
-                                 
-                                 label {
-                                    cursor: pointer;
-                                 }
-                                 
-                                 legend {
-                                    display: block;
-                                 }
-                                 
-                                 /* off yellow background input */
-                                 input:-webkit-autofill,
-                                 input:-webkit-autofill:hover,
-                                 input:-webkit-autofill:focus,
-                                 textarea:-webkit-autofill,
-                                 textarea:-webkit-autofill:hover,
-                                 textarea:-webkit-autofill:focus,
-                                 select:-webkit-autofill,
-                                 select:-webkit-autofill:hover,
-                                 select:-webkit-autofill:focus {
-                                   border-bottom: 1px solid #8f8d8d;
-                                   -webkit-text-fill-color: #161616;
-                                   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
-                                   transition: background-color 5000s ease-in-out 0s;
-                                 }
-                                 
-                                 input[type="search"]::-webkit-search-decoration,
-                                 input[type="search"]::-webkit-search-cancel-button,
-                                 input[type="search"]::-webkit-search-results-button,
-                                 input[type="search"]::-webkit-search-results-decoration {
-                                   display: none;
-                                 }
+   /* Reset and base styles  */
+   * {
+      padding: 0px;
+      margin: 0px;
+      border: none;
+   }
+                                    
+   *,
+   *::before,
+   *::after {
+      box-sizing: border-box;
+   }
+                                    
+   :focus,
+   :active {
+      outline: none;
+   }
+                                    
+   /* Links */
+                                    
+   a, a:visited  {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+   }
+                                    
+   a:hover  {
+      color: inherit;
+      text-decoration: none;
+   }
+                                    
+   a:focus,
+   a:active {
+      outline: none;
+   }
+                                    
+   /* Common */
+                                    
+   aside, nav, footer, header, section, main {
+      display: block;
+   }
+                                    
+   h1, h2, h3, h4, h5, h6, p {
+      font-size: inherit;
+      font-weight: inherit;
+   }
+                                    
+   ul {
+      list-style: none;
+   }
+                                    
+   img, svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+   }
+                                    
+   /* Form */
+                                    
+   input, textarea, button, select {
+      font-family: inherit;
+      font-size: inherit;
+   }
+                                    
+   input::-ms-clear {
+      display: none;
+   }
+                                    
+   button, input[type="submit"] {
+      display: inline-block;
+      box-shadow: none;
+      background-color: transparent;
+      background: none;
+      cursor: pointer;
+   }
+                                    
+   input:focus, input:active,
+   button:focus, button:active {
+      outline: none;
+   }
+                                    
+   button::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+   }
+                                    
+   label {
+      cursor: pointer;
+   }
+                                    
+   legend {
+      display: block;
+   }
+                                    
+   /* off yellow background input */
+   input:-webkit-autofill,
+   input:-webkit-autofill:hover,
+   input:-webkit-autofill:focus,
+   textarea:-webkit-autofill,
+   textarea:-webkit-autofill:hover,
+   textarea:-webkit-autofill:focus,
+   select:-webkit-autofill,
+   select:-webkit-autofill:hover,
+   select:-webkit-autofill:focus {
+      border-bottom: 1px solid #8f8d8d;
+      -webkit-text-fill-color: #161616;
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+      transition: background-color 5000s ease-in-out 0s;
+   }
+                                    
+   input[type="search"]::-webkit-search-decoration,
+   input[type="search"]::-webkit-search-cancel-button,
+   input[type="search"]::-webkit-search-results-button,
+   input[type="search"]::-webkit-search-results-decoration {
+      display: none;
+   }
                            </code>
                         </pre>
                         </div>
